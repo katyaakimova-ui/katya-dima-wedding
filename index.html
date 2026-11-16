@@ -169,7 +169,7 @@
     <p class="rsvp-foot">Анкета відкриється в новій вкладці. Відповіді збирає Google Forms — так ми нічого не загубимо ♡</p>
   </div>
 </div></section>
-<section class="section green" id="music"><div class="shell center"><div class="eyebrow">Без вас плейліст не той</div><h2 class="sec-title">Пісню, будь ласка!</h2><p class="intro">У кожного з нас є пісня, під яку неможливо всидіти на місці. Додайте свої улюблені треки до нашого спільного плейліста в YouTube Music — нехай на весіллі звучить музика, яку ми всі любимо!</p><div class="music-box"><div class="musical-notes" aria-hidden="true">♪ ♫ ♪</div><h3>Складемо плейліст разом</h3><p>Уявіть: зимовий вечір, наші улюблені люди й пісні, які хочеться співати всім хором.</p><a class="playlist-button" href="https://music.youtube.com/playlist?list=PLWvRYTLQuQAo&amp;jct=hmxT_BHi1MTj20ejHPL7dA" target="_blank" rel="noopener noreferrer" aria-label="Відкрити наш спільний плейліст у YouTube Music (відкриється в новій вкладці)">♫ Додати свою пісню ↗</a><p style="font-size:12px;margin-top:18px;opacity:.85">Посилання веде до спільного плейліста. Щоб додати треки, може знадобитися вхід у YouTube Music.</p><div class="musical-notes" aria-hidden="true">♫ ♡ ♬</div></div><p style="margin-top:35px;font-family:'Caveat',cursive;font-size:35px">До нашого дня — <span id="days-left">…</span> днів ♡</p></div></section>
+<section class="section green" id="music"><div class="shell center"><div class="eyebrow">Без вас плейліст не той</div><h2 class="sec-title">Пісню, будь ласка!</h2><p class="intro">У кожного з нас є пісня, під яку неможливо всидіти на місці. Додайте свої улюблені треки до нашого спільного плейліста в YouTube Music — нехай на весіллі звучить музика, яку ми всі любимо!</p><div class="music-box"><div class="musical-notes" aria-hidden="true">♪ ♫ ♪</div><h3>Складемо плейліст разом</h3><p>Уявіть: зимовий вечір, наші улюблені люди й пісні, які хочеться співати всім хором.</p><a class="playlist-button" href="https://music.youtube.com/playlist?list=PLWvRYTLQuQAo&amp;jct=hmxT_BHi1MTj20ejHPL7dA" target="_blank" rel="noopener noreferrer" aria-label="Відкрити наш спільний плейліст у YouTube Music (відкриється в новій вкладці)">♫ Додати свою пісню ↗</a><p style="font-size:12px;margin-top:18px;opacity:.85">Посилання веде до спільного плейліста. Щоб додати треки, може знадобитися вхід у YouTube Music.</p><div class="musical-notes" aria-hidden="true">♫ ♡ ♬</div></div><p style="margin-top:35px;font-family:'Caveat',cursive;font-size:35px">До нашого дня — <span id="days-left">…</span> <span id="days-word">днів</span> ♡</p></div></section>
 </main>
 <footer><div class="footnames">Катя & Діма</div><p>Побачимося 17 грудня 2026 року. Любимо вас! ♡</p><a class="back-to-top" href="#home" aria-label="Повернутися на початок сторінки">На початок ↑</a></footer>
 <script>
@@ -179,7 +179,9 @@
     const today=Date.UTC(map.year,map.month-1,map.day);
     const wedding=Date.UTC(2026,11,17);
     const days=Math.max(0,Math.round((wedding-today)/86400000));
+    const dayWord=days%100>=11&&days%100<=14?'днів':days%10===1?'день':days%10>=2&&days%10<=4?'дні':'днів';
     document.getElementById('days-left').textContent=days;
+    document.getElementById('days-word').textContent=dayWord;
   }
   updateCountdown();
 </script>
