@@ -113,6 +113,17 @@
   .drivers-map-action .drivers-hotel-link{margin-left:auto;padding:10px 0}
   .drivers-section .transport-note{max-width:none;margin-top:35px}
   @media(max-width:740px){.drivers-map-card{padding:10px;box-shadow:5px 6px 0 #e9c6c3}.drivers-map-card iframe{height:300px}.drivers-map-action{padding:16px 5px 7px}.route-app-button{flex:1 1 140px}.drivers-map-action .drivers-hotel-link{width:100%;margin-left:0;text-align:center}.map-route-label{font-size:11px}}
+
+  /* Compact wedding finale: countdown and farewell belong to one visual group. */
+  #music{padding-bottom:42px}
+  footer.wedding-finale{padding:26px 20px 38px}
+  .finale-card{max-width:700px;margin:0 auto 22px;padding:24px 20px 18px;border-top:1px solid #d1d6bd;border-bottom:1px solid #d1d6bd}
+  footer .finale-card .footnames{font-size:clamp(32px,6vw,47px);line-height:1.1;margin-bottom:12px}
+  .finale-countdown{font-family:'Caveat',cursive;font-size:clamp(31px,6vw,48px);line-height:1.2;color:#ffe3c8;margin:0 0 14px}
+  .finale-message{font-family:'Playfair Display',Georgia,serif;font-size:clamp(21px,4vw,31px);font-weight:500;line-height:1.3;margin:0 0 8px;color:#fff9ef}
+  .finale-love{font-family:'Caveat',cursive;font-size:clamp(25px,4vw,33px);line-height:1.2;margin:0;color:#f7d1ca}
+  footer.wedding-finale .back-to-top{margin-top:4px}
+  @media(max-width:740px){#music{padding-bottom:32px}footer.wedding-finale{padding-top:18px}.finale-card{padding:20px 6px 16px}}
 </style>
 </head>
 <body>
@@ -169,9 +180,17 @@
     <p class="rsvp-foot">Анкета відкриється в новій вкладці. Відповіді збирає Google Forms — так ми нічого не загубимо ♡</p>
   </div>
 </div></section>
-<section class="section green" id="music"><div class="shell center"><div class="eyebrow">Без вас плейліст не той</div><h2 class="sec-title">Пісню, будь ласка!</h2><p class="intro">У кожного з нас є пісня, під яку неможливо всидіти на місці. Додайте свої улюблені треки до нашого спільного плейліста в YouTube Music — нехай на весіллі звучить музика, яку ми всі любимо!</p><div class="music-box"><div class="musical-notes" aria-hidden="true">♪ ♫ ♪</div><h3>Складемо плейліст разом</h3><p>Уявіть: зимовий вечір, наші улюблені люди й пісні, які хочеться співати всім хором.</p><a class="playlist-button" href="https://music.youtube.com/playlist?list=PLWvRYTLQuQAo&amp;jct=hmxT_BHi1MTj20ejHPL7dA" target="_blank" rel="noopener noreferrer" aria-label="Відкрити наш спільний плейліст у YouTube Music (відкриється в новій вкладці)">♫ Додати свою пісню ↗</a><p style="font-size:12px;margin-top:18px;opacity:.85">Посилання веде до спільного плейліста. Щоб додати треки, може знадобитися вхід у YouTube Music.</p><div class="musical-notes" aria-hidden="true">♫ ♡ ♬</div></div><p style="margin-top:35px;font-family:'Caveat',cursive;font-size:35px">До нашого дня — <span id="days-left">…</span> <span id="days-word">днів</span> ♡</p></div></section>
+<section class="section green" id="music"><div class="shell center"><div class="eyebrow">Без вас плейліст не той</div><h2 class="sec-title">Пісню, будь ласка!</h2><p class="intro">У кожного з нас є пісня, під яку неможливо всидіти на місці. Додайте свої улюблені треки до нашого спільного плейліста в YouTube Music — нехай на весіллі звучить музика, яку ми всі любимо!</p><div class="music-box"><div class="musical-notes" aria-hidden="true">♪ ♫ ♪</div><h3>Складемо плейліст разом</h3><p>Уявіть: зимовий вечір, наші улюблені люди й пісні, які хочеться співати всім хором.</p><a class="playlist-button" href="https://music.youtube.com/playlist?list=PLWvRYTLQuQAo&amp;jct=hmxT_BHi1MTj20ejHPL7dA" target="_blank" rel="noopener noreferrer" aria-label="Відкрити наш спільний плейліст у YouTube Music (відкриється в новій вкладці)">♫ Додати свою пісню ↗</a><p style="font-size:12px;margin-top:18px;opacity:.85">Посилання веде до спільного плейліста. Щоб додати треки, може знадобитися вхід у YouTube Music.</p><div class="musical-notes" aria-hidden="true">♫ ♡ ♬</div></div></div></section>
 </main>
-<footer><div class="footnames">Катя & Діма</div><p>Побачимося 17 грудня 2026 року. Любимо вас! ♡</p><a class="back-to-top" href="#home" aria-label="Повернутися на початок сторінки">На початок ↑</a></footer>
+<footer class="wedding-finale">
+  <div class="finale-card">
+    <div class="footnames">Катя & Діма ♡</div>
+    <p class="finale-countdown">До нашого дня — <span id="days-left">…</span> <span id="days-word">днів</span></p>
+    <p class="finale-message">Побачимося 17 грудня 2026 року!</p>
+    <p class="finale-love">Любимо вас! ♡</p>
+  </div>
+  <a class="back-to-top" href="#home" aria-label="Повернутися на початок сторінки">На початок ↑</a>
+</footer>
 <script>
   function updateCountdown(){
     const parts=new Intl.DateTimeFormat('en-US',{timeZone:'Europe/Kyiv',year:'numeric',month:'numeric',day:'numeric'}).formatToParts(new Date());
